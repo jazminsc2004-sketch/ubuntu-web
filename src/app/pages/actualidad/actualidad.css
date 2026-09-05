@@ -28,7 +28,7 @@
 }
 
 .intro {
-  max-width: 750px;
+  max-width: 780px;
   margin-bottom: 55px;
 }
 
@@ -40,14 +40,14 @@
 }
 
 .intro h2 {
-  font-size: 36px;
+  font-size: 38px;
   margin: 15px 0 20px;
 }
 
 .intro p {
   color: #555;
-  line-height: 1.7;
   font-size: 17px;
+  line-height: 1.7;
 }
 
 .placeholder {
@@ -57,25 +57,25 @@
   margin-top: 25px;
 }
 
-.activities-grid {
+.news-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
 
-.activity-card {
+.news-card {
   background: white;
   border: 1px solid #e5e5e5;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.activity-card:hover {
+.news-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-.activity-image {
+.news-image {
   height: 230px;
   background: #eeeeee;
   display: flex;
@@ -83,57 +83,56 @@
   justify-content: center;
 }
 
-.activity-image span {
+.news-image span {
   color: #888;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
 }
 
-.activity-content {
-  padding: 30px;
+.news-content {
+  padding: 25px;
 }
 
-.activity-category {
+.news-category {
   color: #d71920;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
 }
 
-.activity-content h3 {
-  font-size: 25px;
-  margin: 12px 0;
+.news-content h3 {
+  font-size: 23px;
+  margin: 10px 0;
 }
 
-.activity-content p {
+.news-content p {
   color: #666;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.activity-content a {
+.news-content a {
   color: #d71920;
   text-decoration: none;
   font-weight: 700;
 }
 
-.activities-cta {
+.news-cta {
   background: #d71920;
   color: white;
   padding: 55px 8%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 30px;
 }
 
-.activities-cta p {
+.news-cta p {
   margin: 0 0 8px;
-  font-size: 15px;
 }
 
-.activities-cta h2 {
+.news-cta h2 {
   margin: 0;
   font-size: 32px;
 }
@@ -145,15 +144,19 @@
   padding: 15px 28px;
   text-decoration: none;
   font-weight: 700;
-  transition: 0.3s;
 }
 
 .btn-white:hover {
   background: #f2f2f2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .news-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
+@media (max-width: 600px) {
   .page-header {
     padding: 60px 6%;
   }
@@ -167,14 +170,14 @@
   }
 
   .intro h2 {
-    font-size: 29px;
+    font-size: 30px;
   }
 
-  .activities-grid {
+  .news-grid {
     grid-template-columns: 1fr;
   }
 
-  .activities-cta {
+  .news-cta {
     flex-direction: column;
     align-items: flex-start;
   }

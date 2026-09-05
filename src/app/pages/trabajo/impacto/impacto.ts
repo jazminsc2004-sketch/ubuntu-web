@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-impacto',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './impacto.html',
-  styleUrl: './impacto.css',
+  styleUrl: './impacto.css'
 })
 export class Impacto {}

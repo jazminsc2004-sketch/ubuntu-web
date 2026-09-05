@@ -13,7 +13,20 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/inicio/inicio').then(m => m.Inicio)
   },
-
+// ACTUALIDAD
+{
+  path: 'actualidad',
+  loadComponent: () =>
+    import('./pages/actualidad/actualidad')
+      .then(m => m.Actualidad)
+},
+// CONTACTO
+{
+  path: 'contacto',
+  loadComponent: () =>
+    import('./pages/contacto/contacto')
+      .then(m => m.Contacto)
+},
   // QUIÉNES SOMOS
   {
     path: 'nosotros',
@@ -107,4 +120,6 @@ export const routes: Routes = [
       import('./pages/voluntariado/registro/registro')
         .then(m => m.Registro)
   }
+
+  
 ];

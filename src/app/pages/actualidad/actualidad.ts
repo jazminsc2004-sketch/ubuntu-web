@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-galeria',
+  selector: 'app-actualidad',
   imports: [RouterLink],
-  templateUrl: './galeria.html',
-  styleUrl: './galeria.css'
+  templateUrl: './actualidad.html',
+  styleUrl: './actualidad.css'
 })
-export class Galeria {}
+export class Actualidad {}
