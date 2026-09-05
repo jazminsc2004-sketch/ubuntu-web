@@ -1,0 +1,95 @@
+.page-header {
+  background-color: #d71920;
+  color: white;
+  padding: 80px 10%;
+}
+
+.page-header p {
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.page-header h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.page-header span {
+  font-size: 17px;
+}
+
+.content-section {
+  padding: 80px 10%;
+}
+
+.intro {
+  max-width: 750px;
+  margin-bottom: 50px;
+}
+
+.section-label {
+  color: #d71920;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.intro h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  color: #555;
+  line-height: 1.8;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.team-card {
+  border: 1px solid #e5e5e5;
+  background-color: white;
+}
+
+.photo-placeholder {
+  height: 280px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f1f1f1;
+
+  color: #999;
+}
+
+.team-info {
+  padding: 25px;
+}
+
+.team-info h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.team-info p {
+  color: #d71920;
+  font-size: 14px;
+}
+
+@media (max-width: 800px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header h1 {
+    font-size: 38px;
+  }
+}

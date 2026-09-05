@@ -1,0 +1,133 @@
+.navbar {
+  height: 80px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #ffffff;
+
+  border-bottom: 1px solid #eeeeee;
+
+  position: relative;
+  z-index: 1000;
+}
+
+/* LOGO */
+
+.logo {
+  color: #d71920;
+  text-decoration: none;
+
+  font-size: 28px;
+  font-weight: 800;
+}
+
+/* MENU */
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.menu a,
+.menu-button {
+  color: #333333;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+.menu a:hover,
+.menu-button:hover {
+  color: #d71920;
+}
+
+/* ITEM CON SUBMENU */
+
+.menu-item {
+  position: relative;
+}
+
+/* BOTÓN QUIÉNES SOMOS */
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* SUBMENU */
+
+.submenu {
+  position: absolute;
+
+  top: 100%;
+  left: 0;
+
+  width: 210px;
+
+  background-color: white;
+
+  border-top: 3px solid #d71920;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+  padding: 10px 0;
+
+  display: none;
+}
+
+/* MOSTRAR SUBMENU */
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+/* OPCIONES DEL SUBMENU */
+
+.submenu a {
+  display: block;
+
+  padding: 12px 18px;
+
+  color: #333333;
+
+  font-size: 14px;
+}
+
+.submenu a:hover {
+  background-color: #f8f8f8;
+  color: #d71920;
+}
+
+/* BOTÓN VOLUNTARIO */
+
+.btn-voluntario {
+  background-color: #d71920;
+
+  color: white;
+
+  text-decoration: none;
+
+  padding: 12px 20px;
+
+  border-radius: 4px;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.btn-voluntario:hover {
+  background-color: #b51218;
+}

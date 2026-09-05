@@ -1,0 +1,169 @@
+.page-header {
+  background: #d71920;
+  color: white;
+  padding: 80px 8%;
+}
+
+.page-header p {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.page-header h1 {
+  font-size: 48px;
+  margin: 0 0 15px;
+}
+
+.page-header span {
+  font-size: 18px;
+  max-width: 700px;
+  display: block;
+  line-height: 1.6;
+}
+
+
+.form-section {
+  max-width: 900px;
+  margin: auto;
+  padding: 70px 8%;
+}
+
+
+.form-intro {
+  margin-bottom: 40px;
+}
+
+.section-label {
+  color: #d71920;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.form-intro h2 {
+  font-size: 34px;
+  margin: 10px 0 15px;
+}
+
+.form-intro p {
+  color: #555;
+  line-height: 1.7;
+}
+
+
+.volunteer-form {
+  border: 1px solid #e5e5e5;
+  padding: 40px;
+  background: white;
+}
+
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border: 1px solid #d5d5d5;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #d71920;
+}
+
+
+.form-group textarea {
+  resize: vertical;
+}
+
+
+.privacy {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 10px 0 30px;
+}
+
+
+.privacy input {
+  margin-top: 4px;
+}
+
+
+.privacy label {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+.btn-submit {
+  width: 100%;
+  border: none;
+  background: #d71920;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.btn-submit:hover {
+  background: #b9141a;
+}
+
+
+@media (max-width: 768px) {
+
+  .page-header {
+    padding: 60px 6%;
+  }
+
+  .page-header h1 {
+    font-size: 36px;
+  }
+
+  .form-section {
+    padding: 50px 6%;
+  }
+
+  .volunteer-form {
+    padding: 25px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+}

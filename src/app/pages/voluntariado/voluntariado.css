@@ -1,0 +1,207 @@
+.hero-voluntariado {
+  min-height: 520px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 80px 10%;
+
+  background-color: #d71920;
+
+  color: white;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.section-label {
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: bold;
+
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 58px;
+  line-height: 1.1;
+
+  margin-bottom: 25px;
+}
+
+.hero-content > p:not(.section-label) {
+  font-size: 18px;
+  line-height: 1.7;
+
+  max-width: 600px;
+
+  margin-bottom: 35px;
+}
+
+.btn-primary {
+  display: inline-block;
+
+  padding: 14px 25px;
+
+  background-color: white;
+  color: #d71920;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  border-radius: 4px;
+}
+
+.content-section {
+  padding: 80px 10%;
+}
+
+.intro {
+  max-width: 800px;
+
+  margin-bottom: 55px;
+}
+
+.red-label {
+  color: #d71920;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 15px;
+}
+
+.intro h2 {
+  font-size: 38px;
+
+  margin-bottom: 25px;
+}
+
+.intro p {
+  color: #555;
+
+  line-height: 1.8;
+}
+
+.cards {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+}
+
+.volunteer-card {
+  display: block;
+
+  padding: 35px;
+
+  min-height: 240px;
+
+  border: 1px solid #e5e5e5;
+
+  text-decoration: none;
+
+  color: #333;
+
+  transition: 0.3s;
+}
+
+.volunteer-card:hover {
+  border-color: #d71920;
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.volunteer-card > span {
+  color: #d71920;
+
+  font-size: 14px;
+
+  font-weight: bold;
+}
+
+.volunteer-card h3 {
+  font-size: 24px;
+
+  margin: 25px 0 15px;
+}
+
+.volunteer-card p {
+  color: #666;
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+.volunteer-card strong {
+  color: #d71920;
+
+  font-size: 14px;
+}
+
+.call-to-action {
+  background-color: #d71920;
+
+  color: white;
+
+  padding: 50px 10%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.call-to-action p {
+  margin-bottom: 8px;
+}
+
+.call-to-action h2 {
+  font-size: 32px;
+}
+
+.btn-white {
+  background-color: white;
+
+  color: #d71920;
+
+  padding: 14px 25px;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  border-radius: 4px;
+
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .call-to-action {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+}
