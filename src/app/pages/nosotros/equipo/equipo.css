@@ -1,95 +1,258 @@
 .page-header {
-  background-color: #d71920;
+  background: #D60000;
   color: white;
-  padding: 80px 10%;
+  padding: 90px 40px;
+  text-align: center;
 }
 
-.page-header p {
+.page-header > div {
+  max-width: 800px;
+  margin: auto;
+}
+
+.page-header span,
+.cierre span {
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
-  letter-spacing: 3px;
-  font-weight: bold;
-  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .page-header h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  margin: 18px 0;
 }
 
-.page-header span {
-  font-size: 17px;
+.page-header p {
+  font-size: 18px;
+  line-height: 1.7;
 }
 
-.content-section {
-  padding: 80px 10%;
-}
+
+/* INTRO */
 
 .intro {
-  max-width: 750px;
-  margin-bottom: 50px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
 }
 
-.section-label {
-  color: #d71920;
+.intro-image {
+  height: 450px;
+}
+
+.intro-image img,
+.integrante-image img,
+.trabajo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.etiqueta {
+  color: #D60000;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 2px;
-  margin-bottom: 15px;
 }
 
-.intro h2 {
+.intro-text h2,
+.section-title h2,
+.trabajo-text h2 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 38px;
-  margin-bottom: 20px;
+  line-height: 1.2;
+  margin: 15px 0 25px;
 }
 
-.intro p {
+.intro-text p,
+.trabajo-text p {
   color: #555;
+  font-size: 17px;
   line-height: 1.8;
 }
 
-.team-grid {
+
+/* INTEGRANTES */
+
+.integrantes {
+  background: #f7f7f7;
+  padding: 100px 40px;
+}
+
+.section-title {
+  text-align: center;
+  max-width: 750px;
+  margin: auto;
+}
+
+.section-title > span {
+  color: #D60000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.integrantes-grid {
+  max-width: 1200px;
+  margin: 55px auto 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
 }
 
-.team-card {
-  border: 1px solid #e5e5e5;
-  background-color: white;
+.integrante {
+  background: white;
 }
 
-.photo-placeholder {
-  height: 280px;
+.integrante-image {
+  height: 300px;
+  overflow: hidden;
+}
 
-  display: flex;
+.integrante-image img {
+  transition: transform .4s ease;
+}
+
+.integrante:hover img {
+  transform: scale(1.05);
+}
+
+.integrante-content {
+  padding: 30px;
+}
+
+.integrante-content h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+
+.integrante-content p {
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+
+/* TRABAJO */
+
+.trabajo {
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
   align-items: center;
-  justify-content: center;
-
-  background-color: #f1f1f1;
-
-  color: #999;
 }
 
-.team-info {
-  padding: 25px;
+.trabajo-image {
+  height: 430px;
 }
 
-.team-info h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
+.trabajo-text > span {
+  color: #D60000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
-.team-info p {
-  color: #d71920;
-  font-size: 14px;
+.trabajo-text a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #D60000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
 }
+
+
+/* CIERRE */
+
+.cierre {
+  background: #D60000;
+  color: white;
+  text-align: center;
+  padding: 90px 40px;
+}
+
+.cierre h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 38px;
+  margin: 0 0 20px;
+}
+
+.cierre p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+}
+
+.cierre a {
+  display: inline-block;
+  background: white;
+  color: #D60000;
+  padding: 15px 28px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+
+/* RESPONSIVE */
 
 @media (max-width: 800px) {
-  .team-grid {
+
+  .intro,
+  .trabajo,
+  .integrantes-grid {
     grid-template-columns: 1fr;
   }
 
   .page-header h1 {
-    font-size: 38px;
+    font-size: 40px;
+  }
+
+  .intro-image,
+  .trabajo-image {
+    height: 350px;
+  }
+
+  .intro-text h2,
+  .section-title h2,
+  .trabajo-text h2 {
+    font-size: 30px;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .intro,
+  .trabajo,
+  .integrantes {
+    padding: 65px 25px;
+  }
+
+  .integrante-image {
+    height: 250px;
+  }
+
+  .cierre {
+    padding: 65px 25px;
+  }
+
+  .cierre h2 {
+    font-size: 30px;
   }
 }

@@ -1,178 +1,306 @@
 .page-header {
-  background: #d71920;
+  background: #D60000;
   color: white;
-  padding: 80px 8%;
+  padding: 90px 40px;
+  text-align: center;
 }
 
-.page-header p {
-  font-size: 14px;
+.page-header > div {
+  max-width: 850px;
+  margin: auto;
+}
+
+.page-header span,
+.numbers-header span,
+.impacto-visual-header span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
-  margin-bottom: 15px;
 }
 
 .page-header h1 {
-  font-size: 48px;
-  margin: 0 0 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  margin: 18px 0;
 }
 
-.page-header span {
+.page-header p {
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-.content-section {
+
+/* INTRO */
+
+.impact-intro {
   max-width: 1200px;
   margin: auto;
-  padding: 80px 8%;
+  padding: 100px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
 }
 
-.intro {
-  max-width: 780px;
-  margin-bottom: 55px;
+.impact-image {
+  height: 450px;
 }
 
-.section-label {
-  color: #d71920;
-  font-size: 14px;
+.impact-image img,
+.territorio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.etiqueta {
+  color: #D60000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
 }
 
-.intro h2 {
+.impact-text h2,
+.territorio-text h2,
+.impacto-visual-header h2 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 38px;
-  margin: 15px 0 20px;
+  line-height: 1.2;
+  margin: 15px 0 25px;
 }
 
-.intro p {
+.impact-text p,
+.territorio-text > p {
   color: #555;
   font-size: 17px;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
-.placeholder {
+
+/* NÚMEROS */
+
+.numbers {
   background: #f7f7f7;
-  border-left: 4px solid #d71920;
-  padding: 15px 20px;
-  margin-top: 25px;
+  padding: 100px 40px;
 }
 
-.impact-grid {
+.numbers-header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.numbers-header span {
+  color: #D60000;
+}
+
+.numbers-header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 38px;
+  margin: 15px 0 0;
+}
+
+.numbers-grid {
+  max-width: 1200px;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
-.impact-card {
-  border: 1px solid #e5e5e5;
-  padding: 35px 25px;
-  text-align: center;
+.number-card {
   background: white;
+  padding: 45px 30px;
+  text-align: center;
+  border-top: 5px solid #D60000;
 }
 
-.impact-card strong {
+.number-card strong {
   display: block;
-  color: #d71920;
-  font-size: 52px;
-  line-height: 1;
-  margin: 5px 0 15px;
+  color: #D60000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px;
+  font-weight: 800;
 }
 
-.impact-number {
-  color: #d71920;
-  font-size: 25px;
+.number-card span {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+  font-size: 18px;
+  margin: 12px 0;
 }
 
-.impact-card p {
-  color: #555;
-  font-size: 15px;
+.number-card p {
+  color: #666;
+  line-height: 1.6;
   margin: 0;
 }
 
-.impact-message {
-  background: #f7f7f7;
-  padding: 80px 8%;
+
+/* TERRITORIO */
+
+.territorio {
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
 }
 
-.impact-message-content {
+.territorio-image {
+  height: 430px;
+}
+
+.territorio-dato {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-left: 5px solid #D60000;
+  padding-left: 20px;
+}
+
+.territorio-dato strong {
+  color: #D60000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+}
+
+.territorio-dato span {
+  color: #555;
+  line-height: 1.5;
+}
+
+
+/* PASOS */
+
+.impacto-visual {
+  background: #D60000;
+  color: white;
+  padding: 100px 40px;
+}
+
+.impacto-visual-header {
   max-width: 750px;
   margin: auto;
   text-align: center;
 }
 
-.impact-message h2 {
-  font-size: 38px;
-  margin: 15px 0 20px;
+.impacto-visual-header h2 {
+  margin-bottom: 55px;
 }
 
-.impact-message p:last-child {
+.impacto-pasos {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.paso {
+  border: 1px solid rgba(255,255,255,.4);
+  padding: 30px;
+}
+
+.paso strong {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+}
+
+.paso h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+  margin: 18px 0 10px;
+}
+
+.paso p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* CIERRE */
+
+.cierre {
+  background: white;
+  text-align: center;
+  padding: 90px 40px;
+}
+
+.cierre h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 38px;
+  margin: 0 0 20px;
+}
+
+.cierre p {
   color: #555;
-  font-size: 17px;
+  max-width: 650px;
+  margin: 0 auto 30px;
   line-height: 1.7;
 }
 
-.impact-cta {
-  background: #d71920;
-  color: white;
-  padding: 55px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-}
-
-.impact-cta p {
-  margin: 0 0 8px;
-}
-
-.impact-cta h2 {
-  margin: 0;
-  font-size: 32px;
-}
-
-.btn-white {
+.cierre a {
   display: inline-block;
-  background: white;
-  color: #d71920;
+  background: #D60000;
+  color: white;
   padding: 15px 28px;
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
-.btn-white:hover {
-  background: #f2f2f2;
-}
+
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
-  .impact-grid {
+
+  .impact-intro,
+  .territorio {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .numbers-grid,
+  .impacto-pasos {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px) {
-  .page-header {
-    padding: 60px 6%;
-  }
 
   .page-header h1 {
-    font-size: 36px;
+    font-size: 38px;
   }
 
-  .content-section {
-    padding: 60px 6%;
+  .impact-intro,
+  .territorio,
+  .numbers,
+  .impacto-visual {
+    padding: 65px 25px;
   }
 
-  .intro h2 {
-    font-size: 30px;
-  }
-
-  .impact-grid {
+  .numbers-grid,
+  .impacto-pasos {
     grid-template-columns: 1fr;
   }
 
-  .impact-cta {
-    flex-direction: column;
-    align-items: flex-start;
+  .impact-image,
+  .territorio-image {
+    height: 300px;
+  }
+
+  .impact-text h2,
+  .territorio-text h2,
+  .impacto-visual-header h2,
+  .numbers-header h2,
+  .cierre h2 {
+    font-size: 30px;
   }
 }

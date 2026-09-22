@@ -1,207 +1,356 @@
-.hero-voluntariado {
-  min-height: 520px;
-
-  display: flex;
-  align-items: center;
-
-  padding: 80px 10%;
-
-  background-color: #d71920;
-
+.page-header {
+  background: #D60000;
   color: white;
+  padding: 90px 40px;
+  text-align: center;
 }
 
-.hero-content {
-  max-width: 700px;
+.page-header > div {
+  max-width: 850px;
+  margin: auto;
 }
 
-.section-label {
+.page-header span,
+.experiencia-header span,
+.beneficios-header span,
+.testimonio-text > span {
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
-  letter-spacing: 3px;
-  font-weight: bold;
-
-  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
-.hero-content h1 {
-  font-size: 58px;
-  line-height: 1.1;
-
-  margin-bottom: 25px;
+.page-header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  margin: 18px 0;
 }
 
-.hero-content > p:not(.section-label) {
+.page-header p {
   font-size: 18px;
   line-height: 1.7;
+}
 
-  max-width: 600px;
 
-  margin-bottom: 35px;
+/* INTRO */
+
+.intro {
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.intro-image {
+  height: 450px;
+}
+
+.intro-image img,
+.tipos-image img,
+.testimonio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.etiqueta {
+  color: #D60000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.intro-text h2,
+.experiencia-header h2,
+.tipos-text h2,
+.beneficios-header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 38px;
+  line-height: 1.2;
+  margin: 15px 0 25px;
+}
+
+.intro-text p,
+.tipos-text > p {
+  color: #555;
+  font-size: 17px;
+  line-height: 1.8;
 }
 
 .btn-primary {
   display: inline-block;
-
-  padding: 14px 25px;
-
-  background-color: white;
-  color: #d71920;
-
+  margin-top: 15px;
+  background: #D60000;
+  color: white;
+  padding: 15px 25px;
   text-decoration: none;
-
-  font-weight: bold;
-
-  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
-.content-section {
-  padding: 80px 10%;
+
+/* EXPERIENCIA */
+
+.experiencia {
+  background: #f7f7f7;
+  padding: 100px 40px;
 }
 
-.intro {
-  max-width: 800px;
-
-  margin-bottom: 55px;
+.experiencia-header {
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
 }
 
-.red-label {
-  color: #d71920;
-
-  font-size: 13px;
-
-  font-weight: bold;
-
-  letter-spacing: 2px;
-
-  margin-bottom: 15px;
+.experiencia-header span,
+.beneficios-header span {
+  color: #D60000;
 }
 
-.intro h2 {
-  font-size: 38px;
-
-  margin-bottom: 25px;
-}
-
-.intro p {
+.experiencia-header p {
   color: #555;
-
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
-.cards {
+.experiencia-grid {
+  max-width: 1100px;
+  margin: 55px auto 0;
   display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
 
-.volunteer-card {
-  display: block;
-
-  padding: 35px;
-
-  min-height: 240px;
-
-  border: 1px solid #e5e5e5;
-
-  text-decoration: none;
-
-  color: #333;
-
-  transition: 0.3s;
+.experiencia-grid article {
+  background: white;
+  padding: 40px 30px;
 }
 
-.volunteer-card:hover {
-  border-color: #d71920;
-
-  transform: translateY(-5px);
-
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-}
-
-.volunteer-card > span {
-  color: #d71920;
-
-  font-size: 14px;
-
-  font-weight: bold;
-}
-
-.volunteer-card h3 {
+.numero {
+  color: #D60000;
+  font-family: 'Montserrat', sans-serif;
   font-size: 24px;
-
-  margin: 25px 0 15px;
+  font-weight: 800;
 }
 
-.volunteer-card p {
-  color: #666;
-
-  line-height: 1.6;
-
-  margin-bottom: 25px;
+.experiencia-grid h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
 }
 
-.volunteer-card strong {
-  color: #d71920;
-
-  font-size: 14px;
+.experiencia-grid p {
+  color: #555;
+  line-height: 1.7;
 }
 
-.call-to-action {
-  background-color: #d71920;
 
-  color: white;
+/* TIPOS */
 
-  padding: 50px 10%;
-
-  display: flex;
-
+.tipos {
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
   align-items: center;
-
-  justify-content: space-between;
-
-  gap: 30px;
 }
 
-.call-to-action p {
-  margin-bottom: 8px;
+.tipos-image {
+  height: 450px;
 }
 
-.call-to-action h2 {
-  font-size: 32px;
+.tipos-lista {
+  margin-top: 30px;
 }
 
-.btn-white {
-  background-color: white;
+.tipo-lista > div {
+  padding: 18px 0;
+  border-bottom: 1px solid #ddd;
+}
 
-  color: #d71920;
+.tipo-lista strong {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}
 
-  padding: 14px 25px;
+.tipo-lista span {
+  display: block;
+  color: #666;
+  margin-top: 5px;
+}
 
+
+/* BENEFICIOS */
+
+.beneficios {
+  background: #D60000;
+  color: white;
+  padding: 100px 40px;
+}
+
+.beneficios-header {
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+}
+
+.beneficios-grid {
+  max-width: 1100px;
+  margin: 55px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.beneficio {
+  border: 1px solid rgba(255,255,255,.4);
+  padding: 35px 25px;
+}
+
+.beneficio > div {
+  font-size: 35px;
+}
+
+.beneficio h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+}
+
+.beneficio p {
+  line-height: 1.6;
+}
+
+
+/* TESTIMONIO */
+
+.testimonio {
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.testimonio-image {
+  height: 400px;
+}
+
+.testimonio-text > span {
+  color: #D60000;
+}
+
+.testimonio-text blockquote {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  line-height: 1.4;
+  margin: 25px 0;
+}
+
+.testimonio-text strong {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.testimonio-text small {
+  display: block;
+  color: #666;
+  margin-top: 5px;
+}
+
+
+/* CIERRE */
+
+.cierre {
+  background: #D60000;
+  color: white;
+  text-align: center;
+  padding: 90px 40px;
+}
+
+.cierre h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 38px;
+  margin: 0 0 20px;
+}
+
+.cierre p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+}
+
+.cierre a {
+  display: inline-block;
+  background: white;
+  color: #D60000;
+  padding: 15px 28px;
   text-decoration: none;
-
-  font-weight: bold;
-
-  border-radius: 4px;
-
-  white-space: nowrap;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
-@media (max-width: 700px) {
 
-  .hero-content h1 {
-    font-size: 42px;
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .intro,
+  .tipos,
+  .testimonio {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
-  .cards {
+  .experiencia-grid {
     grid-template-columns: 1fr;
   }
 
-  .call-to-action {
-    flex-direction: column;
+  .beneficios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-    align-items: flex-start;
+@media (max-width: 600px) {
+
+  .page-header h1 {
+    font-size: 38px;
   }
 
+  .intro,
+  .tipos,
+  .testimonio,
+  .experiencia,
+  .beneficios {
+    padding: 65px 25px;
+  }
+
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-image,
+  .tipos-image,
+  .testimonio-image {
+    height: 300px;
+  }
+
+  .intro-text h2,
+  .experiencia-header h2,
+  .tipos-text h2,
+  .beneficios-header h2,
+  .cierre h2 {
+    font-size: 30px;
+  }
+
+  .testimonio-text blockquote {
+    font-size: 24px;
+  }
 }

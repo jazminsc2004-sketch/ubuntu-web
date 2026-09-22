@@ -1,97 +1,225 @@
 .page-header {
-  background-color: #d71920;
+  background: #D60000;
   color: white;
-  padding: 80px 10%;
+  padding: 90px 40px;
+  text-align: center;
 }
 
-.page-header p {
+.page-header > div {
+  max-width: 800px;
+  margin: auto;
+}
+
+.page-header span,
+.valores-header span {
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
-  letter-spacing: 3px;
-  font-weight: bold;
-  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .page-header h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  margin: 18px 0;
 }
 
-.page-header span {
-  font-size: 17px;
+.page-header p {
+  font-size: 18px;
+  line-height: 1.7;
 }
 
-.content-section {
-  padding: 80px 10%;
-}
+
+/* INTRO */
 
 .intro {
-  max-width: 750px;
-  margin-bottom: 50px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
 }
 
-.section-label {
-  color: #d71920;
+.intro-image {
+  height: 420px;
+}
+
+.intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.etiqueta {
+  color: #D60000;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 2px;
-  margin-bottom: 15px;
 }
 
 .intro h2 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 38px;
-  margin-bottom: 20px;
+  line-height: 1.2;
+  margin: 15px 0 25px;
 }
 
 .intro p {
   color: #555;
+  font-size: 17px;
   line-height: 1.8;
 }
 
-.values-grid {
+
+/* VALORES */
+
+.valores-section {
+  background: #f7f7f7;
+  padding: 100px 40px;
+}
+
+.valores-header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.valores-header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 38px;
+  margin-top: 15px;
+}
+
+.valores-grid {
+  max-width: 1200px;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+  gap: 35px;
 }
 
-.value-card {
+.valor-card {
+  background: white;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  min-height: 280px;
+}
+
+.valor-image {
+  height: 100%;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.valor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+
+.valor-card:hover .valor-image img {
+  transform: scale(1.05);
+}
+
+.valor-content {
   padding: 35px;
-  border: 1px solid #e5e5e5;
-  transition: 0.3s;
 }
 
-.value-card:hover {
-  border-color: #d71920;
-  transform: translateY(-4px);
+.valor-content > span {
+  color: #D60000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
-.value-card span {
-  color: #d71920;
-  font-weight: bold;
-  font-size: 14px;
+.valor-content h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  margin: 12px 0 15px;
 }
 
-.value-card h3 {
-  font-size: 24px;
-  margin: 20px 0 12px;
+.valor-content p {
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
 }
 
-.value-card p {
-  color: #666;
+
+/* FRASE */
+
+.quote {
+  background: #D60000;
+  color: white;
+  text-align: center;
+  padding: 90px 40px;
+}
+
+.quote h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  margin: 0 0 20px;
+}
+
+.quote p {
+  max-width: 600px;
+  margin: auto;
   line-height: 1.7;
 }
 
-.note {
-  margin-top: 35px;
-  color: #888;
-  font-size: 13px;
-}
 
-@media (max-width: 700px) {
-  .values-grid {
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+  .intro,
+  .valores-grid {
     grid-template-columns: 1fr;
   }
 
+  .intro {
+    gap: 40px;
+  }
+
   .page-header h1 {
-    font-size: 38px;
+    font-size: 40px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .intro,
+  .valores-section {
+    padding: 65px 25px;
+  }
+
+  .valor-card {
+    grid-template-columns: 1fr;
+  }
+
+  .valor-image {
+    height: 250px;
+    min-height: 250px;
+  }
+
+  .intro-image {
+    height: 300px;
+  }
+
+  .intro h2,
+  .valores-header h2 {
+    font-size: 30px;
+  }
+
+  .quote {
+    padding: 65px 25px;
+  }
+
+  .quote h2 {
+    font-size: 30px;
   }
 }

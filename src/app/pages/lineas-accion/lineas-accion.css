@@ -1,0 +1,314 @@
+/* =========================
+   ENCABEZADO
+========================= */
+
+.page-header {
+  background: linear-gradient(
+    135deg,
+    #d71920,
+    #a80008
+  );
+
+  color: white;
+
+  padding: 100px 10%;
+}
+
+.header-content {
+  max-width: 850px;
+}
+
+.section-label {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+
+  margin-bottom: 18px;
+}
+
+.page-header h1 {
+  font-size: 55px;
+  line-height: 1.1;
+
+  margin-bottom: 25px;
+}
+
+.header-text {
+  font-size: 18px;
+  line-height: 1.7;
+
+  max-width: 750px;
+}
+
+
+/* =========================
+   INTRODUCCIÓN
+========================= */
+
+.intro-section {
+  padding: 100px 10%;
+  background-color: white;
+}
+
+.intro-content {
+  max-width: 850px;
+}
+
+.intro-content .section-label {
+  color: #d71920;
+}
+
+.intro-content h2 {
+  font-size: 42px;
+  color: #222;
+
+  margin-bottom: 25px;
+}
+
+.intro-content p {
+  font-size: 17px;
+  color: #555;
+
+  line-height: 1.8;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================
+   LÍNEAS DE ACCIÓN
+========================= */
+
+.lines-section {
+  background-color: #f6f6f6;
+
+  padding: 90px 10%;
+}
+
+.lines-container {
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 30px;
+}
+
+
+/* TARJETAS */
+
+.line-card {
+  background-color: white;
+
+  padding: 45px 35px;
+
+  border: 1px solid #eeeeee;
+
+  transition: 0.3s;
+}
+
+.line-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.08);
+}
+
+
+/* ICONO */
+
+.line-icon {
+  font-size: 50px;
+
+  margin-bottom: 25px;
+}
+
+
+/* NÚMERO */
+
+.line-number {
+  color: #d71920;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+
+/* TÍTULO */
+
+.line-content h2 {
+  font-size: 30px;
+
+  color: #222;
+
+  margin-top: 12px;
+
+  margin-bottom: 20px;
+}
+
+
+/* TEXTO */
+
+.line-content p {
+  color: #666;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  margin-bottom: 15px;
+}
+
+
+/* =========================
+   CTA VOLUNTARIADO
+========================= */
+
+.cta-section {
+  background: linear-gradient(
+    135deg,
+    #d71920,
+    #a80008
+  );
+
+  padding: 100px 10%;
+
+  color: white;
+
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+
+  margin: auto;
+}
+
+.cta-section h2 {
+  font-size: 45px;
+
+  margin-bottom: 25px;
+}
+
+.cta-section p {
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  margin-bottom: 35px;
+}
+
+
+/* BOTÓN */
+
+.btn-volunteer {
+  display: inline-block;
+
+  background-color: white;
+
+  color: #d71920;
+
+  padding: 15px 30px;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  border-radius: 4px;
+
+  transition: 0.3s;
+}
+
+.btn-volunteer:hover {
+  transform: translateY(-3px);
+
+  background-color: #f2f2f2;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .page-header h1 {
+    font-size: 45px;
+  }
+
+  .lines-container {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-content h2 {
+    font-size: 36px;
+  }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+  .page-header {
+    padding: 70px 7%;
+  }
+
+  .page-header h1 {
+    font-size: 38px;
+  }
+
+  .header-text {
+    font-size: 16px;
+  }
+
+
+  .intro-section {
+    padding: 70px 7%;
+  }
+
+  .intro-content h2 {
+    font-size: 32px;
+  }
+
+  .intro-content p {
+    font-size: 16px;
+  }
+
+
+  .lines-section {
+    padding: 70px 7%;
+  }
+
+  .line-card {
+    padding: 35px 25px;
+  }
+
+  .line-content h2 {
+    font-size: 27px;
+  }
+
+
+  .cta-section {
+    padding: 70px 7%;
+  }
+
+  .cta-section h2 {
+    font-size: 34px;
+  }
+
+  .cta-section p {
+    font-size: 16px;
+  }
+
+}

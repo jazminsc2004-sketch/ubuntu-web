@@ -1,140 +1,76 @@
-<section class="page-header">
-  <div>
-    <p>CONTACTO</p>
-    <h1>Estamos para escucharte</h1>
+<section class="contact-hero">
+  <div class="contact-hero-content">
+    <p>UBUNTU JÓVENES VOLUNTARIOS PERÚ</p>
+
+    <h1>Contáctanos</h1>
+
     <span>
-      Ponte en contacto con Ubuntu. Estaremos encantados de atender
-      tus consultas y brindarte más información.
+      Estamos disponibles para escucharte, orientarte y conocer tus ideas.
     </span>
   </div>
 </section>
 
 
-<section class="content-section">
+<section class="contact-section">
 
-  <div class="contact-grid">
-
-    <div class="contact-info">
-
-      <p class="section-label">CONTÁCTANOS</p>
-
-      <h2>¿Tienes alguna consulta?</h2>
-
-      <p class="intro-text">
-        Si deseas conocer más sobre nuestras iniciativas, proyectos,
-        actividades o voluntariado, puedes comunicarte con nosotros
-        a través de nuestros canales de atención.
-      </p>
+  <div class="contact-image">
+    <img
+      src="/imagenes/AQUI-FOTO-CONTACTO.jpg"
+      alt="Equipo de Ubuntu"
+    >
+  </div>
 
 
-      <div class="contact-item">
+  <div class="contact-content">
+
+    <p class="section-label">HABLEMOS</p>
+
+    <h2>¿Tienes alguna consulta?</h2>
+
+    <p>
+      Si quieres conocer más sobre Ubuntu, nuestras actividades,
+      proyectos, voluntariado o posibles alianzas, puedes comunicarte
+      con nosotros.
+    </p>
+
+    <div class="contact-data">
+
+      <div class="contact-data-item">
 
         <div class="contact-icon">
-          ✉
+          <i class="fas fa-envelope"></i>
         </div>
 
         <div>
-          <span>Correo electrónico</span>
-          <strong>correo@ubuntu.org</strong>
+          <span class="data-label">CORREO ELECTRÓNICO</span>
+
+          <a href="mailto:administracion.sistemas@ubuntujvperu.org">
+            administracion.sistemas@ubuntujvperu.org
+          </a>
         </div>
 
       </div>
 
 
-      <div class="contact-item">
+      <div class="contact-data-item">
 
         <div class="contact-icon">
-          ☎
+          <i class="fab fa-whatsapp"></i>
         </div>
 
         <div>
-          <span>Teléfono</span>
-          <strong>+51 000 000 000</strong>
+          <span class="data-label">WHATSAPP</span>
+
+          <a
+            href="https://wa.me/51913107220"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Escríbenos directamente
+          </a>
         </div>
 
       </div>
-
-
-      <div class="contact-item">
-
-        <div class="contact-icon">
-          📍
-        </div>
-
-        <div>
-          <span>Ubicación</span>
-          <strong>Perú</strong>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <div class="contact-form-container">
-
-      <h2>Envíanos un mensaje</h2>
-
-      <form>
-
-        <div class="form-row">
-
-          <div class="form-group">
-            <label for="nombre">Nombre *</label>
-
-            <input
-              id="nombre"
-              type="text"
-              placeholder="Ingresa tu nombre"
-              required>
-          </div>
-
-
-          <div class="form-group">
-            <label for="email">Correo electrónico *</label>
-
-            <input
-              id="email"
-              type="email"
-              placeholder="ejemplo@correo.com"
-              required>
-          </div>
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="asunto">Asunto *</label>
-
-          <input
-            id="asunto"
-            type="text"
-            placeholder="¿Sobre qué deseas consultarnos?"
-            required>
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label for="mensaje">Mensaje *</label>
-
-          <textarea
-            id="mensaje"
-            rows="6"
-            placeholder="Escribe tu mensaje..."
-            required>
-          </textarea>
-
-        </div>
-
-
-        <button type="submit" class="btn-submit">
-          Enviar mensaje
-        </button>
-
-      </form>
 
     </div>
 
@@ -143,20 +79,65 @@
 </section>
 
 
-<section class="contact-cta">
+<section class="contact-collaboration">
 
-  <div>
+  <div class="collaboration-content">
 
-    <p>¿Quieres formar parte de Ubuntu?</p>
+    <p class="section-label">TRABAJEMOS JUNTOS</p>
 
-    <h2>Únete como voluntario</h2>
+    <h2>¿Quieres colaborar con Ubuntu?</h2>
+
+    <p>
+      Ubuntu trabaja junto a instituciones, empresas y grupos que desean
+      contribuir a sus iniciativas y proyectos.
+    </p>
+
+    <p>
+      Si representas una organización y quieres conocer más sobre nuestras
+      actividades o explorar una posible colaboración, puedes comunicarte
+      con nosotros.
+    </p>
+
+    <a
+      href="mailto:administracion.sistemas@ubuntujvperu.org"
+      class="btn-primary"
+    >
+      Enviar un correo
+    </a>
 
   </div>
 
-  <a
-    routerLink="/voluntariado/registro"
-    class="btn-white">
-    Quiero ser voluntario
-  </a>
+  <div class="collaboration-image">
+    <img
+      src="/imagenes/AQUI-FOTO-ALIANZAS.jpg"
+      alt="Colaboración y trabajo en equipo"
+    >
+  </div>
+
+</section>
+
+
+<section class="contact-question">
+
+  <div class="question-content">
+
+    <p>¿QUIERES FORMAR PARTE DE UBUNTU?</p>
+
+    <h2>Si buscas ser voluntario, tenemos un espacio para ti.</h2>
+
+    <span>
+      Conoce el programa de voluntariado y completa tu registro.
+    </span>
+
+    <br><br>
+
+    <a
+      routerLink="/voluntariado/registro"
+      class="btn-white"
+    >
+      Quiero ser voluntario
+    </a>
+
+  </div>
 
 </section>

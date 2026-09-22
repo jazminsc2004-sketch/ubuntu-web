@@ -1,14 +1,11 @@
 .navbar {
-  height: 80px;
+  min-height: 80px;
   padding: 0 7%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   background-color: #ffffff;
-
   border-bottom: 1px solid #eeeeee;
-
   position: relative;
   z-index: 1000;
 }
@@ -18,10 +15,10 @@
 .logo {
   color: #d71920;
   text-decoration: none;
-
   font-size: 28px;
   font-weight: 800;
 }
+
 
 /* MENU */
 
@@ -35,13 +32,10 @@
 .menu-button {
   color: #333333;
   text-decoration: none;
-
   font-size: 15px;
   font-family: Arial, sans-serif;
-
   background: none;
   border: none;
-
   cursor: pointer;
 }
 
@@ -50,13 +44,15 @@
   color: #d71920;
 }
 
+
 /* ITEM CON SUBMENU */
 
 .menu-item {
   position: relative;
 }
 
-/* BOTÓN QUIÉNES SOMOS */
+
+/* BOTONES DEL MENU */
 
 .menu-button {
   display: flex;
@@ -64,42 +60,35 @@
   gap: 6px;
 }
 
+
 /* SUBMENU */
 
 .submenu {
   position: absolute;
-
   top: 100%;
   left: 0;
-
-  width: 210px;
-
+  width: 220px;
   background-color: white;
-
   border-top: 3px solid #d71920;
-
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
-
   padding: 10px 0;
-
   display: none;
 }
 
-/* MOSTRAR SUBMENU */
+
+/* MOSTRAR SUBMENU EN PC */
 
 .menu-item:hover .submenu {
   display: block;
 }
 
+
 /* OPCIONES DEL SUBMENU */
 
 .submenu a {
   display: block;
-
   padding: 12px 18px;
-
   color: #333333;
-
   font-size: 14px;
 }
 
@@ -108,26 +97,190 @@
   color: #d71920;
 }
 
+
 /* BOTÓN VOLUNTARIO */
 
 .btn-voluntario {
   background-color: #d71920;
-
   color: white;
-
   text-decoration: none;
-
   padding: 12px 20px;
-
   border-radius: 4px;
-
   font-size: 14px;
-
   font-weight: bold;
-
   transition: 0.3s;
 }
 
 .btn-voluntario:hover {
   background-color: #b51218;
+}
+
+
+/* BOTÓN HAMBURGUESA */
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: #d71920;
+  margin: 5px 0;
+  border-radius: 2px;
+}
+
+
+/* BOTÓN VOLUNTARIO SOLO PARA MÓVIL */
+
+.mobile-voluntario {
+  display: none;
+}
+
+
+/* ========================================= */
+/*           ADAPTACIÓN PARA CELULAR         */
+/* ========================================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    min-height: 70px;
+    padding: 0 6%;
+  }
+
+
+  /* Mostrar hamburguesa */
+
+  .menu-toggle {
+    display: block;
+  }
+
+
+  /* Ocultar botón de PC */
+
+  .btn-voluntario {
+    display: none;
+  }
+
+
+  /* MENÚ MÓVIL */
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+
+    display: none;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    border-top: 1px solid #eeeeee;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+
+  /* MENÚ ABIERTO */
+
+  .menu.menu-open {
+    display: flex;
+  }
+
+
+  /* ENLACES PRINCIPALES */
+
+  .menu > a {
+    padding: 16px 6%;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+
+  /* ITEMS */
+
+  .menu-item {
+    width: 100%;
+  }
+
+
+  /* BOTONES */
+
+  .menu-button {
+    width: 100%;
+    padding: 16px 6%;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 15px;
+  }
+
+
+  /* SUBMENÚ MÓVIL */
+
+  .submenu {
+    position: static;
+
+    width: 100%;
+
+    display: none;
+
+    box-shadow: none;
+
+    border-top: none;
+
+    padding: 0;
+
+    background: #fafafa;
+  }
+
+
+  /* SUBMENU ABIERTO */
+
+  .menu-item.dropdown-open .submenu {
+    display: block;
+  }
+
+
+  /* ELEMENTOS DEL SUBMENU */
+
+  .submenu a {
+    padding: 14px 10%;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+
+  /* BOTÓN VOLUNTARIO */
+
+  .mobile-voluntario {
+    display: block !important;
+
+    margin: 18px 6%;
+
+    text-align: center;
+
+    background: #d71920;
+
+    color: white !important;
+
+    padding: 14px 20px !important;
+
+    border-radius: 4px;
+
+    font-weight: bold;
+  }
+
 }

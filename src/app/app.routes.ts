@@ -119,7 +119,15 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/voluntariado/registro/registro')
         .then(m => m.Registro)
-  }
+  },
+
+// LÍNEAS DE ACCIÓN
+{
+  path: 'lineas-accion',
+  loadComponent: () =>
+    import('./pages/lineas-accion/lineas-accion')
+      .then(m => m.LineasAccion)
+}
 
   
 ];

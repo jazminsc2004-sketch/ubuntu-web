@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-voluntariado',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './voluntariado.html',
-  styleUrl: './voluntariado.css',
+  styleUrl: './voluntariado.css'
 })
-export class Voluntariado {}
+export class Voluntariado {
+
+}

@@ -1,164 +1,342 @@
+:host {
+  display: block;
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #181818;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
 .page-header {
-  background: #d71920;
+  min-height: 360px;
+  background: #D60000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 30px;
+}
+
+.page-header-content {
+  max-width: 900px;
   color: white;
-  padding: 80px 8%;
 }
 
 .page-header p {
+  font-family: 'Montserrat', Arial, sans-serif;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 2px;
-  margin-bottom: 15px;
+  margin: 0 0 18px;
 }
 
 .page-header h1 {
-  font-size: 48px;
-  margin: 0 0 15px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1.05;
+  margin: 0 0 22px;
+  font-weight: 800;
 }
 
 .page-header span {
-  font-size: 18px;
-  max-width: 700px;
-  display: block;
+  font-size: 19px;
   line-height: 1.6;
 }
 
 
-.form-section {
-  max-width: 900px;
+/* =========================
+   REGISTER SECTION
+========================= */
+
+.register-section {
+  max-width: 1350px;
   margin: auto;
-  padding: 70px 8%;
+  padding: 100px 40px;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 80px;
+  align-items: start;
 }
 
 
-.form-intro {
-  margin-bottom: 40px;
+/* =========================
+   INFORMATION
+========================= */
+
+.register-info {
+  padding-top: 20px;
 }
 
 .section-label {
-  color: #d71920;
-  font-size: 14px;
-  font-weight: bold;
+  color: #D60000;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
   letter-spacing: 2px;
+  margin: 0 0 15px;
 }
 
-.form-intro h2 {
-  font-size: 34px;
-  margin: 10px 0 15px;
+.register-info h2,
+.form-header h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  font-weight: 800;
+  margin: 0 0 25px;
 }
 
-.form-intro p {
+.register-info > p:not(.section-label) {
   color: #555;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   INFO BOXES
+========================= */
+
+.info-box {
+  display: flex;
+  gap: 20px;
+  padding: 25px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.info-number {
+  color: #D60000;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  min-width: 30px;
+}
+
+.info-box h3 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+
+.info-box p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* =========================
+   FORM CONTAINER
+========================= */
+
+.register-form-container {
+  background: #f5f5f5;
+  padding: 45px;
+}
+
+.form-header {
+  margin-bottom: 35px;
+}
+
+.form-header h2 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.form-header > p:last-child {
+  color: #666;
   line-height: 1.7;
+  margin: 0;
 }
 
 
-.volunteer-form {
-  border: 1px solid #e5e5e5;
-  padding: 40px;
-  background: white;
-}
+/* =========================
+   FORM
+========================= */
 
+.register-form {
+  width: 100%;
+}
 
 .form-row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
-
 
 .form-group {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
-
 
 .form-group label {
   display: block;
-  font-weight: bold;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
   margin-bottom: 8px;
-  color: #333;
 }
-
 
 .form-group input,
 .form-group select,
 .form-group textarea {
   width: 100%;
-  box-sizing: border-box;
-  padding: 13px 15px;
   border: 1px solid #d5d5d5;
-  font-family: inherit;
+  background: white;
+  padding: 14px 15px;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 15px;
+  color: #181818;
   outline: none;
+  transition: 0.2s ease;
 }
 
+.form-group input,
+.form-group select {
+  height: 50px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+}
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: #d71920;
+  border-color: #D60000;
 }
 
 
-.form-group textarea {
-  resize: vertical;
+/* =========================
+   CONSENT
+========================= */
+
+.consent-box {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 5px;
+  margin-bottom: 25px;
 }
 
-
-.privacy {
+.checkbox-container {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  margin: 10px 0 30px;
-}
-
-
-.privacy input {
-  margin-top: 4px;
-}
-
-
-.privacy label {
-  color: #555;
+  gap: 12px;
+  cursor: pointer;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
+  color: #555;
 }
 
+.checkbox-container input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: #D60000;
+  flex-shrink: 0;
+}
+
+.consent-box > p {
+  color: #777;
+  font-size: 12px;
+  margin: 12px 0 0;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
 
 .btn-submit {
   width: 100%;
   border: none;
-  background: #d71920;
+  background: #D60000;
   color: white;
-  padding: 16px;
-  font-size: 16px;
-  font-weight: bold;
+  padding: 17px 25px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.2s ease;
 }
-
 
 .btn-submit:hover {
-  background: #b9141a;
+  background: #181818;
 }
 
 
-@media (max-width: 768px) {
+/* =========================
+   CTA
+========================= */
+
+.register-cta {
+  background: #D60000;
+  color: white;
+  text-align: center;
+  padding: 90px 30px;
+}
+
+.register-cta > div {
+  max-width: 850px;
+  margin: auto;
+}
+
+.register-cta p {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0 0 15px;
+}
+
+.register-cta h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1.15;
+  margin: 0 0 20px;
+  font-weight: 800;
+}
+
+.register-cta span {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+  .register-section {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .register-info {
+    padding-top: 0;
+  }
+}
+
+
+@media (max-width: 650px) {
 
   .page-header {
-    padding: 60px 6%;
+    min-height: 300px;
+    padding: 55px 20px;
   }
 
-  .page-header h1 {
-    font-size: 36px;
+  .register-section {
+    padding: 70px 20px;
   }
 
-  .form-section {
-    padding: 50px 6%;
-  }
-
-  .volunteer-form {
-    padding: 25px;
+  .register-form-container {
+    padding: 30px 20px;
   }
 
   .form-row {
@@ -166,4 +344,7 @@
     gap: 0;
   }
 
+  .register-cta {
+    padding: 70px 20px;
+  }
 }

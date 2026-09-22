@@ -1,78 +1,931 @@
+/* ========================================
+   FUENTE Y CONFIGURACIÓN GENERAL
+======================================== */
+
+:host {
+  display: block;
+  font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+  color: #222222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   HERO PRINCIPAL
+======================================== */
+
 .hero {
-  min-height: calc(100vh - 80px);
+  min-height: 650px;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url('/imagenes/PORTADA.jpg');
+
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+
+
+.hero-overlay {
+  min-height: 650px;
 
   display: flex;
   align-items: center;
 
-  padding: 80px 10%;
+  padding: 0 10%;
+}
 
-  background:
-    linear-gradient(
-      rgba(215, 25, 32, 15),
-      rgba(215, 25, 32, 1)
-    );
 
+.hero-content {
+  max-width: 750px;
   color: white;
 }
 
-.hero-content {
-  max-width: 700px;
-}
 
 .hero-subtitle {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 13px;
+  font-weight: 700;
 
   letter-spacing: 3px;
 
   margin-bottom: 20px;
 }
 
+
 .hero h1 {
-  font-size: 58px;
+  font-size: 64px;
   line-height: 1.1;
 
-  margin-bottom: 25px;
+  margin: 0 0 25px;
+
+  font-weight: 700;
 }
 
+
 .hero-text {
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.7;
 
-  max-width: 600px;
+  max-width: 650px;
 
   margin-bottom: 35px;
 }
 
+
+/* ========================================
+   BOTONES HERO
+======================================== */
+
 .hero-buttons {
   display: flex;
   gap: 15px;
+
+  flex-wrap: wrap;
 }
+
 
 .btn-primary,
 .btn-secondary {
   display: inline-block;
 
-  padding: 14px 24px;
+  padding: 15px 28px;
 
   text-decoration: none;
 
-  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
 
-  font-weight: bold;
+  transition: 0.3s ease;
 }
+
+
+/* BOTÓN ROJO */
 
 .btn-primary {
-  background-color: white;
-  color: #d71920;
+  background-color: #e30613;
+  color: white;
+
+  border: 2px solid #e30613;
 }
 
+
+.btn-primary:hover {
+  background-color: #c9000c;
+  border-color: #c9000c;
+}
+
+
+/* BOTÓN BLANCO */
+
 .btn-secondary {
+  background-color: white;
+  color: #222222;
+
   border: 2px solid white;
+}
+
+
+.btn-secondary:hover {
+  background-color: transparent;
   color: white;
 }
 
-.btn-secondary:hover {
+
+/* ========================================
+   ETIQUETAS DE SECCIÓN
+======================================== */
+
+.section-label {
+  color: #e30613;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 15px;
+}
+
+
+.section-label.light {
+  color: white;
+}
+
+
+/* ========================================
+   QUIÉNES SOMOS
+======================================== */
+
+.about {
+  padding: 100px 10%;
+
   background-color: white;
-  color: #d71920;
+}
+
+
+.about-content {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+
+.about-text h2 {
+  font-size: 46px;
+
+  line-height: 1.2;
+
+  margin-bottom: 25px;
+
+  color: #222222;
+}
+
+
+.about-text p {
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: #555555;
+
+  margin-bottom: 25px;
+}
+
+
+.about-image {
+  width: 100%;
+  height: 450px;
+
+  overflow: hidden;
+}
+
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* ========================================
+   ENLACES
+======================================== */
+
+.text-link {
+  display: inline-block;
+
+  color: #e30613;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  margin-top: 5px;
+
+  transition: 0.3s ease;
+}
+
+
+.text-link:hover {
+  color: #a80008;
+
+  transform: translateX(5px);
+}
+
+
+/* ========================================
+   LÍNEAS DE ACCIÓN
+======================================== */
+
+.action-section {
+  padding: 100px 10%;
+
+  background-color: #e30613;
+
+  color: white;
+}
+
+
+.section-header {
+  text-align: center;
+
+  margin-bottom: 55px;
+}
+
+
+.section-header h2 {
+  font-size: 46px;
+
+  margin: 0;
+
+  color: white;
+}
+
+
+/* ========================================
+   TARJETAS
+======================================== */
+
+.action-cards {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+
+.action-card {
+  padding: 35px 25px;
+
+  background-color: white;
+
+  color: #222222;
+
+  text-align: center;
+
+  min-height: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  transition: 0.3s ease;
+}
+
+
+.action-card:hover {
+  transform: translateY(-8px);
+}
+
+
+.action-icon {
+  font-size: 42px;
+
+  margin-bottom: 20px;
+}
+
+
+.action-card h3 {
+  font-size: 23px;
+
+  margin: 0 0 12px;
+
+  color: #222222;
+}
+
+
+.action-card p {
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  color: #555555;
+
+  margin: 0;
+}
+
+
+/* ========================================
+   BOTÓN CENTRAL
+======================================== */
+
+.center-button {
+  text-align: center;
+
+  margin-top: 45px;
+}
+
+
+.btn-lines {
+  display: inline-block;
+
+  padding: 15px 30px;
+
+  border: 2px solid white;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+
+.btn-lines:hover {
+  background-color: white;
+
+  color: #e30613;
+}
+
+
+/* ========================================
+   UBUNTU EN ACCIÓN
+======================================== */
+
+.ubuntu-action {
+  padding: 100px 10%;
+
+  background-color: #ffffff;
+}
+
+
+.action-gallery-header {
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+
+.action-gallery-header h2 {
+  font-size: 46px;
+
+  margin: 0;
+
+  color: #222222;
+}
+
+
+/* ========================================
+   GALERÍA DE 3 FOTOS
+======================================== */
+
+.photo-grid {
+  max-width: 1400px;
+
+  margin: auto;
+
+  display: grid !important;
+
+  grid-template-columns: repeat(3, 1fr) !important;
+
+  gap: 24px;
+
+  width: 100%;
+}
+
+
+/* ========================================
+   LAS TRES CAJAS TIENEN
+   EXACTAMENTE EL MISMO TAMAÑO
+======================================== */
+
+.photo-main,
+.photo-side {
+  position: relative !important;
+
+  width: 100% !important;
+
+  height: 420px !important;
+
+  min-height: 420px !important;
+
+  max-height: 420px !important;
+
+  overflow: hidden !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+}
+
+
+/* ========================================
+   LAS IMÁGENES SE ADAPTAN
+   AL MISMO TAMAÑO SIN DEFORMARSE
+======================================== */
+
+.photo-main img,
+.photo-side img {
+  width: 100% !important;
+
+  height: 100% !important;
+
+  min-width: 100% !important;
+
+  min-height: 100% !important;
+
+  max-width: none !important;
+
+  display: block !important;
+
+  object-fit: cover !important;
+
+  object-position: center !important;
+}
+
+
+/* ========================================
+   CAPA OSCURA SOBRE LAS FOTOS
+======================================== */
+
+.photo-main::after,
+.photo-side::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.18);
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+/* ========================================
+   TEXTO SOBRE LAS FOTOS
+======================================== */
+
+.photo-caption {
+  position: absolute;
+
+  bottom: 30px;
+
+  left: 30px;
+
+  z-index: 2;
+}
+
+
+.photo-caption span {
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+/* ========================================
+   IMPACTO
+======================================== */
+
+.impact-section {
+  padding: 100px 10%;
+
+  background-color: #f5f5f5;
+}
+
+
+.impact-header {
+  text-align: center;
+
+  margin-bottom: 55px;
+}
+
+
+.impact-header h2 {
+  font-size: 46px;
+
+  margin: 0;
+
+  color: #222222;
+}
+
+
+.impact-stats {
+  max-width: 1000px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+.stat-card {
+  background-color: white;
+
+  padding: 40px 25px;
+
+  text-align: center;
+
+  border-bottom: 4px solid #e30613;
+}
+
+
+.stat-card h3 {
+  color: #e30613;
+
+  font-size: 45px;
+
+  margin: 0 0 15px;
+
+  font-weight: 700;
+}
+
+
+.stat-card p {
+  margin: 0;
+
+  font-size: 16px;
+
+  color: #555555;
+}
+
+
+/* ========================================
+   VOLUNTARIADO FINAL
+======================================== */
+
+.volunteer-section {
+  min-height: 520px;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url('/imagenes/PSX_20241001_083825.jpg');
+
+  background-size: cover;
+
+  background-position: center;
+
+  position: relative;
+}
+
+
+.volunteer-overlay {
+  min-height: 520px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 60px 10%;
+}
+
+
+.volunteer-content {
+  max-width: 800px;
+
+  color: white;
+}
+
+
+.volunteer-content p {
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 20px;
+}
+
+
+.volunteer-content h2 {
+  font-size: 48px;
+
+  line-height: 1.2;
+
+  margin: 0 0 25px;
+
+  color: white;
+}
+
+
+.volunteer-content span {
+  font-size: 18px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   BOTÓN VOLUNTARIADO
+======================================== */
+
+.btn-volunteer {
+  display: inline-block;
+
+  background-color: #e30613;
+
+  color: white;
+
+  padding: 16px 30px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition: 0.3s ease;
+}
+
+
+.btn-volunteer:hover {
+  background-color: #c9000c;
+
+  transform: translateY(-3px);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+
+  .about-content {
+    gap: 50px;
+  }
+
+
+  .action-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* GALERÍA: 2 COLUMNAS */
+
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+
+  .photo-main,
+  .photo-side {
+    height: 380px !important;
+
+    min-height: 380px !important;
+
+    max-height: 380px !important;
+  }
+
+}
+
+
+/* ========================================
+   TABLET PEQUEÑA
+======================================== */
+
+@media (max-width: 800px) {
+
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+
+  .about-image {
+    height: 400px;
+  }
+
+
+  .impact-stats {
+    grid-template-columns: 1fr;
+  }
+
+
+  .photo-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+
+  .photo-main,
+  .photo-side {
+    height: 400px !important;
+
+    min-height: 400px !important;
+
+    max-height: 400px !important;
+  }
+
+}
+
+
+/* ========================================
+   CELULAR
+======================================== */
+
+@media (max-width: 600px) {
+
+
+  /* HERO */
+
+  .hero {
+    min-height: 600px;
+  }
+
+
+  .hero-overlay {
+    min-height: 600px;
+
+    padding: 0 7%;
+  }
+
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+
+  .hero-text {
+    font-size: 17px;
+  }
+
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  /* ABOUT */
+
+  .about {
+    padding: 70px 7%;
+  }
+
+
+  .about-text h2 {
+    font-size: 34px;
+  }
+
+
+  .about-image {
+    height: 320px;
+  }
+
+
+  /* LÍNEAS DE ACCIÓN */
+
+  .action-section {
+    padding: 70px 7%;
+  }
+
+
+  .section-header h2 {
+    font-size: 34px;
+  }
+
+
+  .action-cards {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* GALERÍA */
+
+  .ubuntu-action {
+    padding: 70px 7%;
+  }
+
+
+  .action-gallery-header h2 {
+    font-size: 34px;
+  }
+
+
+  .photo-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+
+  .photo-main,
+  .photo-side {
+    height: 320px !important;
+
+    min-height: 320px !important;
+
+    max-height: 320px !important;
+  }
+
+
+  .photo-caption {
+    bottom: 20px;
+
+    left: 20px;
+  }
+
+
+  /* IMPACTO */
+
+  .impact-section {
+    padding: 70px 7%;
+  }
+
+
+  .impact-header h2 {
+    font-size: 34px;
+  }
+
+
+  /* VOLUNTARIADO */
+
+  .volunteer-section {
+    min-height: 500px;
+  }
+
+
+  .volunteer-overlay {
+    min-height: 500px;
+
+    padding: 60px 7%;
+  }
+
+
+  .volunteer-content h2 {
+    font-size: 36px;
+  }
+
+
+  .volunteer-content span {
+    font-size: 16px;
+  }
+
 }

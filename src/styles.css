@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+/* =========================
+   WHATSAPP FLOTANTE
+========================= */
+
+.whatsapp-button {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+
+  width: 58px;
+  height: 58px;
+
+  background: #25D366;
+  color: white;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  font-size: 32px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+
+  z-index: 9999;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-button i {
+  line-height: 1;
+}
+
+
+/* En celulares */
+
+@media (max-width: 600px) {
+
+  .whatsapp-button {
+    width: 52px;
+    height: 52px;
+
+    right: 18px;
+    bottom: 18px;
+
+    font-size: 29px;
+  }
+
+}

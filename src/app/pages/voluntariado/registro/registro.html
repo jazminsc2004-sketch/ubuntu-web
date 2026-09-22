@@ -1,267 +1,365 @@
-<section class="page-header">
-
-  <div>
-    <p>VOLUNTARIADO UBUNTU</p>
-
-    <h1>Quiero ser voluntario</h1>
-
+<section class="register-hero">
+  <div class="register-hero-content">
+    <p>UBUNTU JÓVENES VOLUNTARIOS PERÚ</p>
+    <h1>Únete como voluntario</h1>
     <span>
-      Completa el siguiente formulario y nos pondremos en contacto
-      contigo para brindarte más información.
+      Queremos conocerte y saber cómo puedes formar parte de nuestras iniciativas.
     </span>
   </div>
+</section>
+
+
+<section class="register-section">
+
+  <div class="register-intro">
+    <p class="section-label">REGISTRO DE VOLUNTARIADO</p>
+
+    <h2>Queremos conocerte</h2>
+
+    <p>
+      Completa el siguiente formulario con tus datos. Cuéntanos sobre ti,
+      tus intereses y la forma en la que te gustaría participar en Ubuntu.
+    </p>
+
+    <p>
+      La información proporcionada será utilizada para gestionar tu interés
+      en participar en las actividades de voluntariado.
+    </p>
+  </div>
+
+
+  <form class="register-form" (ngSubmit)="enviarRegistro()">
+
+    <!-- DATOS PERSONALES -->
+
+    <div class="form-block">
+
+      <h3>Datos personales</h3>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="nombres">
+            Nombres <span>*</span>
+          </label>
+
+          <input
+            type="text"
+            id="nombres"
+            name="nombres"
+            [(ngModel)]="voluntario.nombres"
+            placeholder="Ingresa tus nombres"
+            required
+          >
+        </div>
+
+
+        <div class="form-group">
+          <label for="apellidos">
+            Apellidos <span>*</span>
+          </label>
+
+          <input
+            type="text"
+            id="apellidos"
+            name="apellidos"
+            [(ngModel)]="voluntario.apellidos"
+            placeholder="Ingresa tus apellidos"
+            required
+          >
+        </div>
+
+
+        <div class="form-group">
+          <label for="correo">
+            Correo electrónico <span>*</span>
+          </label>
+
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            [(ngModel)]="voluntario.correo"
+            placeholder="ejemplo@correo.com"
+            required
+          >
+        </div>
+
+
+        <div class="form-group">
+          <label for="telefono">
+            Teléfono / WhatsApp <span>*</span>
+          </label>
+
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            [(ngModel)]="voluntario.telefono"
+            placeholder="Ingresa tu número"
+            required
+          >
+        </div>
+
+
+        <div class="form-group">
+          <label for="edad">
+            Edad
+          </label>
+
+          <input
+            type="number"
+            id="edad"
+            name="edad"
+            [(ngModel)]="voluntario.edad"
+            placeholder="Ej. 21"
+            min="1"
+            max="100"
+          >
+        </div>
+
+
+        <div class="form-group">
+          <label for="ciudad">
+            Ciudad
+          </label>
+
+          <input
+            type="text"
+            id="ciudad"
+            name="ciudad"
+            [(ngModel)]="voluntario.ciudad"
+            placeholder="¿Dónde vives?"
+          >
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PERFIL -->
+
+    <div class="form-block">
+
+      <h3>Sobre ti</h3>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+
+          <label for="perfil">
+            ¿Cuál es tu perfil? <span>*</span>
+          </label>
+
+          <select
+            id="perfil"
+            name="perfil"
+            [(ngModel)]="voluntario.perfil"
+            required
+          >
+            <option value="">
+              Selecciona una opción
+            </option>
+
+            <option value="Joven">
+              Joven
+            </option>
+
+            <option value="Estudiante">
+              Estudiante
+            </option>
+
+            <option value="Profesional">
+              Profesional
+            </option>
+
+            <option value="Interno o pasante">
+              Interno o pasante
+            </option>
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="interes">
+            ¿En qué te gustaría participar? <span>*</span>
+          </label>
+
+          <select
+            id="interes"
+            name="interes"
+            [(ngModel)]="voluntario.interes"
+            required
+          >
+
+            <option value="">
+              Selecciona una opción
+            </option>
+
+            <option value="Social">
+              Acción social
+            </option>
+
+            <option value="Ambiental">
+              Acción ambiental
+            </option>
+
+            <option value="Animalista">
+              Acción animalista
+            </option>
+
+            <option value="Cultural">
+              Actividades culturales
+            </option>
+
+            <option value="Educación">
+              Educación
+            </option>
+
+            <option value="Comunidad">
+              Trabajo comunitario
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+      <div class="form-group full">
+
+        <label for="experiencia">
+          Cuéntanos sobre tu experiencia
+        </label>
+
+        <textarea
+          id="experiencia"
+          name="experiencia"
+          [(ngModel)]="voluntario.experiencia"
+          rows="5"
+          placeholder="Puedes contarnos si has participado anteriormente en voluntariados, proyectos, actividades sociales, ambientales, culturales, etc."
+        ></textarea>
+
+      </div>
+
+
+      <div class="form-group full">
+
+        <label for="disponibilidad">
+          ¿Cuál es tu disponibilidad?
+        </label>
+
+        <textarea
+          id="disponibilidad"
+          name="disponibilidad"
+          [(ngModel)]="voluntario.disponibilidad"
+          rows="4"
+          placeholder="Indica qué días u horarios tienes disponibles."
+        ></textarea>
+
+      </div>
+
+    </div>
+
+
+    <!-- CONSENTIMIENTO -->
+
+    <div class="form-consent">
+
+      <label class="checkbox-label">
+
+        <input
+          type="checkbox"
+          id="consentimiento"
+          name="consentimiento"
+          [(ngModel)]="voluntario.consentimiento"
+          required
+        >
+
+        <span>
+          Declaro que la información proporcionada es verdadera y acepto
+          que mis datos sean utilizados para gestionar mi interés en
+          participar en las actividades de Ubuntu.
+        </span>
+
+      </label>
+
+    </div>
+
+
+    <!-- MENSAJES -->
+
+    <div
+      class="form-message success"
+      *ngIf="mensaje"
+    >
+      {{ mensaje }}
+    </div>
+
+
+    <div
+      class="form-message error"
+      *ngIf="error"
+    >
+      {{ error }}
+    </div>
+
+
+    <!-- BOTÓN -->
+
+    <div class="form-actions">
+
+      <button
+        type="submit"
+        class="btn-submit"
+        [disabled]="enviando"
+      >
+
+        <span *ngIf="!enviando">
+          Enviar registro
+        </span>
+
+        <span *ngIf="enviando">
+          Enviando...
+        </span>
+
+      </button>
+
+    </div>
+
+  </form>
 
 </section>
 
 
-<section class="form-section">
+<section class="register-question">
 
-  <div class="form-intro">
+  <div class="question-content">
 
-    <p class="section-label">
-      REGISTRO DE VOLUNTARIADO
-    </p>
+    <p>UBUNTU JÓVENES VOLUNTARIOS PERÚ</p>
 
     <h2>
-      Únete a Ubuntu
+      Tu tiempo y tus conocimientos también pueden aportar.
     </h2>
 
-    <p>
-      Queremos conocerte. Completa tus datos y cuéntanos un poco
-      sobre cómo te gustaría participar.
-    </p>
+    <span>
+      Si tienes alguna consulta antes de registrarte,
+      puedes comunicarte con nosotros.
+    </span>
+
+    <br><br>
+
+    <a
+      href="mailto:administracion.sistemas@ubuntujvperu.org"
+      class="btn-white"
+    >
+      Contactarnos
+    </a>
 
   </div>
-
-
-  <form class="volunteer-form">
-
-    <div class="form-row">
-
-      <div class="form-group">
-
-        <label for="nombres">
-          Nombres *
-        </label>
-
-        <input
-          id="nombres"
-          type="text"
-          placeholder="Ingresa tus nombres"
-          required
-        >
-
-      </div>
-
-
-      <div class="form-group">
-
-        <label for="apellidos">
-          Apellidos *
-        </label>
-
-        <input
-          id="apellidos"
-          type="text"
-          placeholder="Ingresa tus apellidos"
-          required
-        >
-
-      </div>
-
-    </div>
-
-
-    <div class="form-row">
-
-      <div class="form-group">
-
-        <label for="email">
-          Correo electrónico *
-        </label>
-
-        <input
-          id="email"
-          type="email"
-          placeholder="ejemplo@correo.com"
-          required
-        >
-
-      </div>
-
-
-      <div class="form-group">
-
-        <label for="telefono">
-          Teléfono *
-        </label>
-
-        <input
-          id="telefono"
-          type="tel"
-          placeholder="Ingresa tu teléfono"
-          required
-        >
-
-      </div>
-
-    </div>
-
-
-    <div class="form-row">
-
-      <div class="form-group">
-
-        <label for="edad">
-          Edad
-        </label>
-
-        <input
-          id="edad"
-          type="number"
-          placeholder="Ej. 21"
-          min="18"
-        >
-
-      </div>
-
-
-      <div class="form-group">
-
-        <label for="ciudad">
-          Ciudad
-        </label>
-
-        <input
-          id="ciudad"
-          type="text"
-          placeholder="Ingresa tu ciudad"
-        >
-
-      </div>
-
-    </div>
-
-
-    <div class="form-group">
-
-      <label for="tipo-voluntariado">
-        Tipo de voluntariado *
-      </label>
-
-      <select
-        id="tipo-voluntariado"
-        required
-      >
-
-        <option value="">
-          Selecciona una opción
-        </option>
-
-        <option value="general">
-          Voluntariado general
-        </option>
-
-        <option value="profesional">
-          Voluntariado profesional
-        </option>
-
-      </select>
-
-    </div>
-
-
-    <div class="form-group">
-
-      <label for="area">
-        Área de interés
-      </label>
-
-      <select id="area">
-
-        <option value="">
-          Selecciona un área
-        </option>
-
-        <option value="tecnologia">
-          Tecnología
-        </option>
-
-        <option value="comunicacion">
-          Comunicación
-        </option>
-
-        <option value="gestion">
-          Gestión
-        </option>
-
-        <option value="educacion">
-          Educación
-        </option>
-
-        <option value="otra">
-          Otra
-        </option>
-
-      </select>
-
-    </div>
-
-
-    <div class="form-group">
-
-      <label for="experiencia">
-        Cuéntanos sobre ti
-      </label>
-
-      <textarea
-        id="experiencia"
-        rows="5"
-        placeholder="Cuéntanos brevemente sobre tus conocimientos, experiencia o intereses..."
-      ></textarea>
-
-    </div>
-
-
-    <div class="form-group">
-
-      <label for="disponibilidad">
-        Disponibilidad
-      </label>
-
-      <textarea
-        id="disponibilidad"
-        rows="3"
-        placeholder="Indica tus horarios o días disponibles..."
-      ></textarea>
-
-    </div>
-
-
-    <div class="privacy">
-
-      <input
-        id="consentimiento"
-        type="checkbox"
-        required
-      >
-
-      <label for="consentimiento">
-        Autorizo el uso de los datos proporcionados en este formulario
-        para que Ubuntu pueda comunicarse conmigo respecto a
-        oportunidades de voluntariado. *
-      </label>
-
-    </div>
-
-
-    <button
-      type="submit"
-      class="btn-submit"
-    >
-      Enviar registro
-    </button>
-
-  </form>
 
 </section>

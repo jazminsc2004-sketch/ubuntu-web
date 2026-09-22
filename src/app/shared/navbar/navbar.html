@@ -1,93 +1,230 @@
 <header class="navbar">
 
-  <a routerLink="/inicio" class="logo">
+  <!-- LOGO -->
+  <a
+    routerLink="/inicio"
+    class="logo"
+    (click)="closeMenu()">
     UBUNTU
   </a>
 
-  <nav class="menu">
 
-    <a routerLink="/inicio">Inicio</a>
+  <!-- BOTÓN HAMBURGUESA -->
+  <button
+    class="menu-toggle"
+    type="button"
+    (click)="toggleMenu()"
+    aria-label="Abrir menú">
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </button>
+
+
+  <!-- MENÚ -->
+  <nav
+    class="menu"
+    [class.menu-open]="menuOpen">
+
+
+    <!-- INICIO -->
+    <a
+      routerLink="/inicio"
+      (click)="closeMenu()">
+      Inicio
+    </a>
+
 
     <!-- QUIÉNES SOMOS -->
-    <div class="menu-item">
+    <div
+      class="menu-item"
+      [class.dropdown-open]="dropdownOpen === 'nosotros'">
 
-      <button class="menu-button">
+      <button
+        class="menu-button"
+        type="button"
+        (click)="toggleDropdown('nosotros')">
+
         Quiénes somos
         <span>⌄</span>
+
       </button>
 
       <div class="submenu">
-        <a routerLink="/nosotros">Quiénes somos</a>
-        <a routerLink="/nosotros/historia">Historia</a>
-        <a routerLink="/nosotros/mision-vision">Misión y visión</a>
-        <a routerLink="/nosotros/valores">Valores</a>
-        <a routerLink="/nosotros/equipo">Nuestro equipo</a>
+
+        <a
+          routerLink="/nosotros"
+          (click)="closeMenu()">
+          Quiénes somos
+        </a>
+
+        <a
+          routerLink="/nosotros/historia"
+          (click)="closeMenu()">
+          Historia
+        </a>
+
+        <a
+          routerLink="/nosotros/mision-vision"
+          (click)="closeMenu()">
+          Misión y visión
+        </a>
+
+        <a
+          routerLink="/nosotros/valores"
+          (click)="closeMenu()">
+          Valores
+        </a>
+
+        <a
+          routerLink="/nosotros/equipo"
+          (click)="closeMenu()">
+          Nuestro equipo
+        </a>
+
       </div>
 
     </div>
 
 
     <!-- NUESTRO TRABAJO -->
-    <div class="menu-item">
+    <div
+      class="menu-item"
+      [class.dropdown-open]="dropdownOpen === 'trabajo'">
 
-      <button class="menu-button">
+      <button
+        class="menu-button"
+        type="button"
+        (click)="toggleDropdown('trabajo')">
+
         Nuestro trabajo
         <span>⌄</span>
+
       </button>
 
       <div class="submenu">
-        <a routerLink="/trabajo">Nuestro trabajo</a>
-        <a routerLink="/trabajo/proyectos">Proyectos</a>
-        <a routerLink="/trabajo/actividades">Actividades</a>
-        <a routerLink="/trabajo/impacto">Nuestro impacto</a>
-        <a routerLink="/trabajo/galeria">Galería</a>
+
+        <a
+          routerLink="/trabajo"
+          (click)="closeMenu()">
+          Nuestro trabajo
+        </a>
+
+        <a routerLink="/lineas-accion">
+  Líneas de acción
+</a>
+
+        <a
+          routerLink="/trabajo/proyectos"
+          (click)="closeMenu()">
+          Proyectos
+        </a>
+
+        <a
+          routerLink="/trabajo/actividades"
+          (click)="closeMenu()">
+          Actividades
+        </a>
+
+        <a
+          routerLink="/trabajo/impacto"
+          (click)="closeMenu()">
+          Nuestro impacto
+        </a>
+
+        <a
+          routerLink="/trabajo/galeria"
+          (click)="closeMenu()">
+          Galería
+        </a>
+
       </div>
 
     </div>
 
 
     <!-- VOLUNTARIADO -->
-    <div class="menu-item">
+    <div
+      class="menu-item"
+      [class.dropdown-open]="dropdownOpen === 'voluntariado'">
 
-      <button class="menu-button">
+      <button
+        class="menu-button"
+        type="button"
+        (click)="toggleDropdown('voluntariado')">
+
         Voluntariado
         <span>⌄</span>
+
       </button>
 
       <div class="submenu">
-        <a routerLink="/voluntariado">Voluntariado</a>
-        <a routerLink="/voluntariado/porque-voluntario">
+
+        <a
+          routerLink="/voluntariado"
+          (click)="closeMenu()">
+          Voluntariado
+        </a>
+
+        <a
+          routerLink="/voluntariado/porque-voluntario"
+          (click)="closeMenu()">
           ¿Por qué ser voluntario?
         </a>
-        <a routerLink="/voluntariado/profesional">
+
+        <a
+          routerLink="/voluntariado/profesional"
+          (click)="closeMenu()">
           Voluntariado profesional
         </a>
-        <a routerLink="/voluntariado/requisitos">
+
+        <a
+          routerLink="/voluntariado/requisitos"
+          (click)="closeMenu()">
           Requisitos
         </a>
-        <a routerLink="/voluntariado/preguntas-frecuentes">
+
+        <a
+          routerLink="/voluntariado/preguntas-frecuentes"
+          (click)="closeMenu()">
           Preguntas frecuentes
         </a>
+
       </div>
 
     </div>
 
 
     <!-- ACTUALIDAD -->
-    <a routerLink="/actualidad">
+    <a
+      routerLink="/actualidad"
+      (click)="closeMenu()">
       Actualidad
     </a>
 
 
     <!-- CONTACTO -->
-    <a routerLink="/contacto">
-  Contacto
+    <a
+      routerLink="/contacto"
+      (click)="closeMenu()">
+      Contacto
+    </a>
+
+
+    <!-- BOTÓN VOLUNTARIO EN MÓVIL -->
+    <a
+      routerLink="/voluntariado/registro"
+      class="mobile-voluntario"
+      (click)="closeMenu()">
+      Quiero ser voluntario
     </a>
 
   </nav>
 
 
-  <!-- BOTÓN VOLUNTARIO -->
+  <!-- BOTÓN VOLUNTARIO EN PC -->
   <a
     routerLink="/voluntariado/registro"
     class="btn-voluntario">
