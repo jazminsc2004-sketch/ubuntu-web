@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-registro',
@@ -35,9 +34,10 @@ export class Registro {
 
   private apiUrl = 'http://localhost:8080/api/voluntarios';
 
-  constructor(private http: HttpClient) {}
 
-  enviarRegistro(): void {
+  async enviarRegistro(): Promise<void> {
+
+    console.log('BOTÓN ENVIAR PRESIONADO');
 
     this.mensaje = '';
     this.error = '';
@@ -61,40 +61,58 @@ export class Registro {
 
     this.enviando = true;
 
-    this.http.post(this.apiUrl, this.voluntario).subscribe({
+    console.log('ENVIANDO DATOS:', this.voluntario);
 
-      next: () => {
+    try {
 
-        this.mensaje =
-          '¡Registro enviado correctamente! Gracias por querer formar parte de Ubuntu.';
+      const respuesta = await fetch(this.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(this.voluntario)
+      });
 
-        this.voluntario = {
-          nombres: '',
-          apellidos: '',
-          correo: '',
-          telefono: '',
-          edad: null,
-          ciudad: '',
-          perfil: '',
-          interes: '',
-          experiencia: '',
-          disponibilidad: '',
-          consentimiento: false
-        };
+      console.log('STATUS DEL SERVIDOR:', respuesta.status);
 
-        this.enviando = false;
-      },
+      const texto = await respuesta.text();
 
-      error: (error) => {
+      console.log('RESPUESTA DEL SERVIDOR:', texto);
 
-        console.error('Error al enviar registro:', error);
-
-        this.error =
-          'No se pudo enviar el registro. Verifica que el servidor esté funcionando.';
-
-        this.enviando = false;
+      if (!respuesta.ok) {
+        throw new Error(
+          `El servidor respondió con código ${respuesta.status}`
+        );
       }
 
-    });
+      this.mensaje =
+        '¡Registro enviado correctamente! Gracias por querer formar parte de Ubuntu.';
+
+      this.voluntario = {
+        nombres: '',
+        apellidos: '',
+        correo: '',
+        telefono: '',
+        edad: null,
+        ciudad: '',
+        perfil: '',
+        interes: '',
+        experiencia: '',
+        disponibilidad: '',
+        consentimiento: false
+      };
+
+    } catch (error) {
+
+      console.error('ERROR AL ENVIAR REGISTRO:', error);
+
+      this.error =
+        'No se pudo enviar el registro. Verifica que el servidor esté funcionando.';
+
+    } finally {
+
+      this.enviando = false;
+
+    }
   }
 }

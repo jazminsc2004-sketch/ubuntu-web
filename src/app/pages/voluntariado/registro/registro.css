@@ -4,12 +4,11 @@
   color: #181818;
 }
 
-
 /* =========================
-   HEADER
+   HERO
 ========================= */
 
-.page-header {
+.register-hero {
   min-height: 360px;
   background: #D60000;
   display: flex;
@@ -19,12 +18,12 @@
   padding: 70px 30px;
 }
 
-.page-header-content {
+.register-hero-content {
   max-width: 900px;
   color: white;
 }
 
-.page-header p {
+.register-hero p {
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -32,7 +31,7 @@
   margin: 0 0 18px;
 }
 
-.page-header h1 {
+.register-hero h1 {
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: clamp(40px, 6vw, 68px);
   line-height: 1.05;
@@ -40,7 +39,8 @@
   font-weight: 800;
 }
 
-.page-header span {
+.register-hero span {
+  display: block;
   font-size: 19px;
   line-height: 1.6;
 }
@@ -62,10 +62,10 @@
 
 
 /* =========================
-   INFORMATION
+   INTRODUCCIÓN
 ========================= */
 
-.register-info {
+.register-intro {
   padding-top: 20px;
 }
 
@@ -78,8 +78,7 @@
   margin: 0 0 15px;
 }
 
-.register-info h2,
-.form-header h2 {
+.register-intro h2 {
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: clamp(32px, 4vw, 48px);
   line-height: 1.15;
@@ -87,7 +86,7 @@
   margin: 0 0 25px;
 }
 
-.register-info > p:not(.section-label) {
+.register-intro p:not(.section-label) {
   color: #555;
   font-size: 17px;
   line-height: 1.8;
@@ -96,72 +95,27 @@
 
 
 /* =========================
-   INFO BOXES
-========================= */
-
-.info-box {
-  display: flex;
-  gap: 20px;
-  padding: 25px 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.info-number {
-  color: #D60000;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  min-width: 30px;
-}
-
-.info-box h3 {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 20px;
-  margin: 0 0 8px;
-}
-
-.info-box p {
-  color: #666;
-  font-size: 15px;
-  line-height: 1.6;
-  margin: 0;
-}
-
-
-/* =========================
-   FORM CONTAINER
-========================= */
-
-.register-form-container {
-  background: #f5f5f5;
-  padding: 45px;
-}
-
-.form-header {
-  margin-bottom: 35px;
-}
-
-.form-header h2 {
-  font-size: 34px;
-  margin-bottom: 12px;
-}
-
-.form-header > p:last-child {
-  color: #666;
-  line-height: 1.7;
-  margin: 0;
-}
-
-
-/* =========================
-   FORM
+   FORMULARIO
 ========================= */
 
 .register-form {
   width: 100%;
+  background: #f5f5f5;
+  padding: 45px;
 }
 
-.form-row {
+.form-block {
+  margin-bottom: 40px;
+}
+
+.form-block h3 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0 0 25px;
+}
+
+.form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -171,12 +125,20 @@
   margin-bottom: 22px;
 }
 
+.form-group.full {
+  width: 100%;
+}
+
 .form-group label {
   display: block;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 8px;
+}
+
+.form-group label span {
+  color: #D60000;
 }
 
 .form-group input,
@@ -190,7 +152,7 @@
   font-size: 15px;
   color: #181818;
   outline: none;
-  transition: 0.2s ease;
+  transition: border-color 0.2s ease;
 }
 
 .form-group input,
@@ -211,10 +173,10 @@
 
 
 /* =========================
-   CONSENT
+   CONSENTIMIENTO
 ========================= */
 
-.consent-box {
+.form-consent {
   background: white;
   border: 1px solid #ddd;
   padding: 20px;
@@ -222,7 +184,7 @@
   margin-bottom: 25px;
 }
 
-.checkbox-container {
+.checkbox-label {
   display: flex;
   align-items: flex-start;
   gap: 12px;
@@ -232,7 +194,7 @@
   color: #555;
 }
 
-.checkbox-container input {
+.checkbox-label input {
   width: 18px;
   height: 18px;
   margin-top: 2px;
@@ -240,16 +202,38 @@
   flex-shrink: 0;
 }
 
-.consent-box > p {
-  color: #777;
-  font-size: 12px;
-  margin: 12px 0 0;
+
+/* =========================
+   MENSAJES
+========================= */
+
+.form-message {
+  padding: 15px 18px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.form-message.success {
+  background: #eaf7ed;
+  border-left: 4px solid #2e7d32;
+  color: #246b29;
+}
+
+.form-message.error {
+  background: #fdecec;
+  border-left: 4px solid #D60000;
+  color: #a00000;
 }
 
 
 /* =========================
-   BUTTON
+   BOTÓN
 ========================= */
+
+.form-actions {
+  margin-top: 10px;
+}
 
 .btn-submit {
   width: 100%;
@@ -268,24 +252,29 @@
   background: #181818;
 }
 
+.btn-submit:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
 
 /* =========================
-   CTA
+   SECCIÓN FINAL
 ========================= */
 
-.register-cta {
+.register-question {
   background: #D60000;
   color: white;
   text-align: center;
   padding: 90px 30px;
 }
 
-.register-cta > div {
+.question-content {
   max-width: 850px;
   margin: auto;
 }
 
-.register-cta p {
+.question-content p {
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 13px;
   font-weight: 800;
@@ -293,7 +282,7 @@
   margin: 0 0 15px;
 }
 
-.register-cta h2 {
+.question-content h2 {
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: clamp(32px, 4vw, 50px);
   line-height: 1.15;
@@ -301,9 +290,26 @@
   font-weight: 800;
 }
 
-.register-cta span {
+.question-content span {
   font-size: 17px;
   line-height: 1.7;
+}
+
+.btn-white {
+  display: inline-block;
+  background: white;
+  color: #D60000;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 0.2s ease;
+}
+
+.btn-white:hover {
+  background: #181818;
+  color: white;
 }
 
 
@@ -318,7 +324,7 @@
     gap: 50px;
   }
 
-  .register-info {
+  .register-intro {
     padding-top: 0;
   }
 }
@@ -326,25 +332,33 @@
 
 @media (max-width: 650px) {
 
-  .page-header {
+  .register-hero {
     min-height: 300px;
     padding: 55px 20px;
+  }
+
+  .register-hero h1 {
+    font-size: 40px;
+  }
+
+  .register-hero span {
+    font-size: 16px;
   }
 
   .register-section {
     padding: 70px 20px;
   }
 
-  .register-form-container {
+  .register-form {
     padding: 30px 20px;
   }
 
-  .form-row {
+  .form-grid {
     grid-template-columns: 1fr;
     gap: 0;
   }
 
-  .register-cta {
+  .register-question {
     padding: 70px 20px;
   }
 }
